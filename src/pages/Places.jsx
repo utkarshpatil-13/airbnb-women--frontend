@@ -157,11 +157,11 @@ export default function Places() {
                                     <div className="bg-slate-200 flex gap-4 rounded-2xl p-4 my-4 cursor-pointer transform transition duration-500 
                                         hover:scale-95">
                                         <div className="w-32 h-32 bg-slate-300 grow shrink-0 rounded-xl">
-                                            <img src="http://res.cloudinary.com/dab9wtfej/image/upload/v1713637332/r9elcmn6toeahwbrqgmt.png" alt="" className=" object-fill w-full h-full rounded-xl" />
+                                            <img src={place.photos[0]} alt="" className=" object-fill w-full h-full rounded-xl" />
                                         </div>
                                         <div>
-                                            <h2 className="text-xl font-bold">Uniquely designed organic nature house</h2>
-                                            <p className="text-sm mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel placeat nemo eaque aliquam sed. Assumenda optio minus inventore pariatur blanditiis veritatis dignissimos aliquam autem illo magnam fugit, ratione aut odit suscipit ab. At, itaque!</p>
+                                            <h2 className="text-xl font-bold">{place.title}</h2>
+                                            <p className="text-sm mt-2">{place.description}</p>
                                         </div>
                                     </div>
                                     </Link>

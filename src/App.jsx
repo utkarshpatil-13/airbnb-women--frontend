@@ -7,6 +7,8 @@ import RegisterPage from './pages/RegisterPage'
 import { UserContextProvider } from './contexts/UserContext'
 import AccountPage from './pages/Account'
 import PlacePage from './pages/PlacePage'
+import BookingsPage from './pages/BookingsPage'
+import BookingsList from './pages/BookingsList'
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
           <Route path='/account/:subpage?' element={<AccountPage />} />          
           <Route path='/account/:subpage/:action' element={<AccountPage />} />          
           <Route path='/account/:subpage/:id' element={<AccountPage />} />          
+          <Route path='/account/bookings' element={<BookingsList />} />          
+          <Route path='/account/bookings/:id' element={<BookingsPage />} />          
           <Route path='/place/:id' element={<PlacePage />} />          
         </Route>
       </Routes>
