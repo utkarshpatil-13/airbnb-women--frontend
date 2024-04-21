@@ -1,26 +1,14 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import { Routes, Route } from 'react-router-dom'
 import IndexPage from './pages/IndexPage'
 import LoginPage from './pages/LoginPage'
 import Layout from './Layout'
 import RegisterPage from './pages/RegisterPage'
-import axios from 'axios'
-import UserContext, { UserContextProvider } from './contexts/UserContext'
+import { UserContextProvider } from './contexts/UserContext'
 import AccountPage from './pages/Account'
-
-// import { useContext, useEffect } from 'react'
-
-axios.defaults.baseURL = 'http://localhost:7000'
-axios.defaults.withCredentials = true
+import PlacePage from './pages/PlacePage'
 
 function App() {
-
-  // const {user, setUser} = useContext(UserContext);
-  // const token = localStorage.getItem('token');
-
   return (
     <UserContextProvider>
       <Routes>
@@ -29,6 +17,9 @@ function App() {
           <Route path='/login' element={<LoginPage />} />
           <Route path='/register' element={<RegisterPage />} />
           <Route path='/account/:subpage?' element={<AccountPage />} />          
+          <Route path='/account/:subpage/:action' element={<AccountPage />} />          
+          <Route path='/account/:subpage/:id' element={<AccountPage />} />          
+          <Route path='/place/:id' element={<PlacePage />} />          
         </Route>
       </Routes>
     </UserContextProvider>
